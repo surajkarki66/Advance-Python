@@ -1,5 +1,6 @@
 class File:
     def __init__(self, filename, method):
+        print("In Constructor")
         self.file = open(filename, method)
 
     def __enter__(self):
@@ -18,3 +19,4 @@ with File("./context-managers/file.txt", "w") as f:
     f.write("Nice")
     print("Writted")
     #raise FileExistsError()
+print("End")
